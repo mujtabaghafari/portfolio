@@ -1,0 +1,1138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto Flex", sans-serif;
+    scroll-behavior: smooth;
+    user-select: none;
+}
+:root{
+    --Primary: #000000;
+    --Secondary: #ffffff;
+    --Tertiary: #3F3F3F;
+}
+html,body{
+    overflow-x: hidden;
+    
+   }
+nav{
+    position: relative;
+    height: 60px;
+    background: var(--Secondary) !important;
+    padding: 10px;
+    text-transform: uppercase;
+}
+nav .logo{
+    margin-left: 20px;
+}
+nav .nav-link{
+    color: var(--Primary) !important;
+    transition: all 0.3s ease;
+    position: relative;
+}
+nav ul li a{
+    position: relative;
+    margin: 0 5px;
+}
+nav ul li a::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    bottom: -2px;
+    background: var(--Primary);
+    width: 0%;
+    height: 4px;
+    transition: all 0.5s ease;
+}
+nav ul li a:hover::after{
+    width: 100%;
+}
+nav .active-btn{
+    background: var(--Primary) !important;
+    color: var(--Secondary) !important;
+    transition: all 0.3s ease;
+}
+nav .active-btn:hover::after{
+    width: 0;
+}
+nav input[type="checkbox"]{
+    display: none;
+}
+nav #icon{
+    background: var(--Primary);
+    color: var(--Secondary);
+    padding: 10px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    display: none;
+}
+.content{
+    position: absolute;
+    top: 30%;
+    left: 2%;
+    z-index: 1000;
+}
+.content .text{
+    color: var(--Secondary);
+    font-weight: 500;
+}
+.content .name{
+    color: var(--Secondary);
+    margin: -20px 0 0 -3px;
+    font-weight: 500;
+}
+.content .job{
+    color: var(--Secondary);
+    display: flex;
+}
+.content .typing-text{
+    color: var(--Secondary);
+    margin-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 4px solid var(--Secondary);
+    animation: typing 6s steps(24) infinite;
+}
+@keyframes typing {
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 24ch;
+    }
+    100%{
+        width: 0ch;
+    }
+}
+main{
+    height: 100vh !important;
+    background-color: var(--Tertiary);
+}
+main .bg-img{
+    height: 100vh;
+}
+main .bg-img img{
+    height: 100% !important;
+    object-fit: cover;
+    float: right !important;
+}
+#about-section{
+    height: 100vh;
+    padding: 20px 40px;
+    text-align: center;
+}
+#about-section #Header2 h2{
+    padding: 20px;
+    font-size: 1.5em;
+    color: var(--Primary);
+    font-weight: 700;
+    position: relative;
+}
+#about-section #Header2 h2::before{
+    position: absolute;
+    content: '';
+    bottom: 15px;
+    height: 2px;
+    width: 70px;
+    background: var(--Primary);
+}
+#about-section p{
+    font-size: 1.4em;
+    color: var(--Primary);
+    font-weight: 300;
+    padding: 20px;
+}
+#about-section .bio{
+    font-size: 1em;
+}
+#about-section .bio .span1{
+    color: var(--Primary);
+    font-weight: 600;
+}
+#about-section .bio .span2{
+    color: var(--Tertiary);
+    font-weight: 500;
+}
+#about-section .bio .intro{
+    padding: 20px 20px 0 20px;
+}
+#about-section .bio .hobbies{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#about-section .bio .hobbies div{
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    margin: 0 30px;
+}
+#about-section .bio .hobbies span{
+    margin: 0 5px;
+}
+#about-section .bio .hobbies .icon{
+    position: relative;
+    background: var(--Tertiary);
+    color: var(--Secondary);
+    height: 35px;
+    width: 35px;
+    border-radius: 50%;
+    line-height: 33px;
+    text-align: center;
+}
+#about-section .bio .hobbies .icon::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 2px;
+    background: var(--Tertiary);
+    left: -25px;
+    bottom: 15px;
+    transform: rotate(90deg);
+}
+#service-section{
+    height: 100vh;
+}
+section #header{
+    color: var(--Primary);
+    font-size: 2em;
+    font-family: "Avenir Next", sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0;
+}
+#service-section h4{
+    color: var(--Tertiary);
+}
+#service-section .card{
+    background-color: var(--card-bg) !important;
+     color: var(--Primary);
+     box-shadow: 0px 5px 15px 5px rgba(0,0,0,0.15) !important;
+     cursor: pointer;
+}
+#service-section .card:hover > .icon{
+    margin: -30px 0 0 40px;
+}
+#service-section .card h5{
+    color: var(--Primary) !important;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+#service-section .card .icon{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    background: var(--Tertiary);
+    text-align: center;
+    margin: -30px 0 0 20px;
+    transition: all 0.3s ease;
+}
+#service-section .card:hover > .icon {
+    margin: -30px 0 0 45px;
+}
+#service-section .card .icon i{
+    line-height: 60px;
+    font-size: 2em;
+    color: var(--Secondary);
+}
+/* --------Skills Section------------ */
+.conatiner-part{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    grid-gap: 1rem 80px;
+    padding: 1rem 80px;
+    font-size: 1.2rem;
+}
+#skills-section .inner-part .header{
+    text-align: center;
+    color: var(--Primary);
+    position: relative;
+    padding: 1rem;
+    text-transform: uppercase;
+}
+#skills-section .inner-part .header::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 100px;
+    bottom: 10px;
+    transform: translateX(-50%);
+    background: var(--Primary);
+}
+.conatiner-part .skill-box{
+    padding: 1rem;
+    color: var(--Primary);
+    cursor: pointer;
+}
+#skills-section .inner-part{
+    padding-top: 20px;
+}
+.conatiner-part .skill-title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+    margin-bottom: .5rem;
+    position: relative;
+}
+.conatiner-part .skill-title::after{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 0px;
+    left: 50%;
+    bottom: 0;
+    background-color: var(--Tertiary);
+    border-radius: 0 2px 2px 0;
+    transition: all 0.3s ease;
+}
+.conatiner-part .skill-title::before{
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 0px;
+    right: 50%;
+    bottom: 0;
+    background-color: var(--Tertiary);
+    border-radius: 2px 0 0 2px;
+    transition: all 0.3s ease;
+}
+.skill-box:hover > .skill-title::after, .skill-box:hover > .skill-title::before{
+    width: 35px;
+}
+#skills-section .conatiner-part .img{
+    width: 100px;
+    height: 100px;
+    position: relative;
+    border-radius: 50%;
+    background: var(--Tertiary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.skill-title:hover .img{
+    transform: translateY(-10px);
+}
+#skills-section .conatiner-part .img img{
+    height: 70%;
+    width: 70%;
+    object-fit: cover;
+}
+#skills-section .conatiner-part .img::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-color: rgba(100, 100, 100, 0.4);
+    border-radius: 60px 0 0 60px;
+}
+.conatiner-part .skill-icon{
+    width: 120px;
+    z-index: 100;
+}
+.conatiner-part .skill-title h3{
+    margin-top: 0.4em;
+    color: var(--Tertiary);
+}
+#education-section{
+    height: 100vh;
+    overflow: auto ;
+}
+#education-section .hid-sm{
+    margin-left: 5px;}
+#contact-section{
+    height: 100vh !important; 
+    overflow: visible; 
+}
+#contact-section .contact{
+    height: 80%;
+    width: 70%;
+    box-shadow: 0 .2rem .5rem #0006;
+    border-radius: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin: 0px;
+}
+#contact-section .map, #contact-section .form {
+    height: 100%;
+    width: 50%;
+}
+#contact-section .map iframe{
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+#contact-section .form{
+    position: relative;
+    background-color: var(--Tertiary);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+#contact-section .form::before{
+    position: absolute;
+    top: 10%;
+    left: -2.8rem;
+    content: "";
+    height: 0;
+    width: 0;
+    border: 1.4rem solid transparent;
+    border-right: 1.4rem solid var(--Tertiary);
+}
+#contact-section .form h1{
+    color: var(--Secondary);
+    font: 500 1.2rem sans-serif;
+    padding: 1.8rem;
+}
+#contact-section .form form{
+    padding: 0 2rem;
+}
+#contact-section .form input, #contact-section .form textarea{
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid var(--Secondary) !important;
+    border-radius: 2rem;
+    background-color: unset;
+    color: var(--Secondary);
+    font-size: 1rem;
+    outline: none;
+}
+#contact-section .form input:not(:first-child), #contact-section .form textarea, .form button{
+    margin-top: .8rem;
+}
+#contact-section .form button{
+    background-color: var(--Secondary);
+    color: var(--Primary);
+    letter-spacing: 1px;
+    padding: 1rem 2rem;
+    font-weight: 700;
+    border-radius: 2rem;
+    border: none;
+    cursor: pointer;
+}
+#contact-section  .form textarea{
+    height: 6rem;
+    resize: none;
+}
+footer{
+    width: 100vw;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+}
+footer #icons a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background: var(--Tertiary);
+    margin: 0 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+footer #icons a{
+    font-size: 1.5em;
+    color: var(--Secondary);
+    text-decoration: none;
+    line-height: 35px;
+}
+#footer-a a{
+    color: var(--Tertiary) !important;
+     text-decoration: none;
+}
+footer #icons a:hover{
+    color: var(--Tertiary);
+    background: var(--Secondary);
+}
+footer .contact-info i{
+    margin: 0 0 0 5px;
+}
+
+@media (max-width: 1260px){
+    .conatiner-part{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-gap: 1rem 80px;
+        padding: 1rem 80px;
+        font-size: 1.2rem;
+    }
+}
+@media (max-width: 1200px) {
+    .content{
+        top: 15%;
+        left: 2%;
+    }
+    main{
+        height: 70vh !important;
+        background-color: var(--Tertiary);
+    }
+    main .bg-img{
+        height: 70vh;
+    }
+    main .bg-img img{
+        height: 100% !important;
+        object-fit: cover;
+        float: right !important;
+    }
+}
+@media (max-width: 1100px){
+    .content .text{
+        font-size: 1.6em;
+    }
+    .content .name{
+        font-size: 3em;
+    }
+    .content .job{
+        font-size: 1.3em;
+    }
+    main{
+        height: 60vh !important;
+        background-color: var(--Tertiary);
+    }
+    main .bg-img{
+        height: 60vh;
+    }
+    main .bg-img img{
+        height: 100% !important;
+        object-fit: cover;
+        float: right !important;
+    }
+}
+@media (max-width: 1026px){
+    nav ul li a{
+        position: relative;
+        margin: 0px;
+    }
+}
+@media (max-width: 970px){
+    #icon{
+        display: block !important;
+        margin: 0;
+        z-index: 1000;
+    }
+    nav ul li a:hover::after{
+        width: 0%;
+    }
+    nav ul{
+        position: fixed;
+        background-color: #000000d1;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 50%;
+        right: 0;
+        top: 0;
+        z-index: 999;
+        border: 1px solid transparent;
+        right: -100%;
+        transition: all 0.5s ease;
+    }
+    nav ul .nav-link{
+        color: var(--Secondary) !important;
+    }
+    nav ul li:hover,nav .nav-link:hover{
+        background: var(--Secondary);
+        color: var(--Primary) !important;
+        width: 100%;
+        box-shadow: 5px 10px 5px 10px rgba(0,0,0,0.15) inset;
+    }
+    nav .active-btn{
+        background: transparent !important;
+    }
+    nav ul.show{
+        right: 0%;
+    }
+    nav ul li:nth-child(1){
+        margin-top: 100px;
+    }
+    .content .text{
+        font-size: 1.5em;
+    }
+    .content .name{
+        font-size: 2.7em;
+    }
+    .content .job{
+        font-size: 1.2em;
+    }
+    section #header{
+        font-size: 1.5em;
+    }
+    #contact-section .contact{
+        height: 80%;
+        width: 80%;
+    }
+}
+@media (max-width: 880px){
+    nav #icon{
+        padding: 10px 15px;
+        border-radius: 6px;
+        cursor: pointer;
+        display: none;
+        z-index: 1000;
+    }
+    nav .logo{
+        height: 100%;
+        width: 40%;
+        margin-left: 7px;
+    }
+    .conatiner-part{
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        grid-gap: 1rem 0;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
+@media (min-width: 768px) and (max-width: 1200px){
+        #service-section{
+            padding: 20px !important;
+        }
+    .card-padding{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card-padding .grid-card-1{
+        width: 100%;
+    }
+    .card-padding .grid-card-2{
+        width: 100%;
+    }
+    .card-padding .grid-card-3{
+        width: 100%;
+    }
+}
+@media (max-width: 768px){
+    main .bg-img img{
+        margin-right: -100px !important;
+    }
+    #education-section .hid-sm{
+        display: none;
+    }
+    #skills-section .conatiner-part .img{
+        width: 80px;
+        height: 80px;
+    }
+        #contact-section .contact{
+        height: 80%;
+        width: 90%;
+    }
+}
+@media (max-width: 767px){
+    main .bg-img img{
+        margin-right: 0 !important;
+    }
+}
+@media (max-width: 712px){
+    main{
+        height: 70vh !important;
+    }
+    main .bg-img img{
+        display: none;
+    }
+    main .bg-img{
+        height: 70vh;
+        margin: 0;
+        background-image: url(../images/home\,\ Mujtaba\ Ghafari.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-size: contain;   
+    }
+    nav ul{
+        width: 100%;
+    } 
+    nav{
+        z-index: 2000;
+    } 
+    #about-section{
+        padding: 10px 20px;
+    }
+    #about-section p{
+        font-size: 1em;
+        color: var(--Primary);
+        font-weight: 300;
+        padding: 20px;
+    }
+    #about-section .bio .hobbies{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    #contact-section .contact{
+        height: 90%;
+        width: 80%;
+    }
+        #contactGrid{
+            display: grid !important;
+            grid-template-columns: 1fr;
+        }
+        #contactGrid .map{
+            grid-column: 1 / 12;
+            width: 100%;
+            height: 100%;
+        }
+        #contactGrid .form{
+            grid-column: 1 / 12;
+            width: 100% !important;
+            height: 100% !important;
+        }
+        #contactGrid .form form{
+            width: 100% !important;
+            height: 100% !important;
+            padding: 20px !important;
+        }
+        #contactGrid .form button{
+            width: 100%;
+            margin: 15px auto;
+        }
+}
+@media (max-width: 630px){
+    #contact-section{
+        padding-top: 5px;
+    }
+    #contact-section .contact{
+        margin: 50px auto;
+    }
+    section #header{
+        font-family: "Avenir Next", sans-serif;
+        font-weight: 900;
+        text-transform: uppercase;
+        font-style: italic;
+        letter-spacing: 0.05em;
+        text-align: center;
+    }
+    #contact-section .form button{
+        padding: .5rem;
+        font-weight: 700;
+        border-radius: .4rem;
+        font-size: .9em;
+    }
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    footer .contact-info{
+        margin-top: 10px;
+    }
+    footer .contact-info i{
+        margin-top: 10px;
+    }
+}
+@media (min-width: 629px){
+    #contact-section{
+        position: relative;
+        display: flex !important;
+    }
+    #contactGrid{
+        height: 100vh;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+
+    }
+    #contactGrid .map{
+        width: 100%;
+    }
+    #contactGrid .form{
+        width: 100% !important;
+        padding: 0px !important;
+    }
+    #contactGrid .form form{
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+@media (max-width: 500px){
+    main{
+        height: 60vh !important;
+    }
+    main .bg-img{
+        height: 60vh;
+        margin: 0;
+        background-image: url(../images/home\,\ Mujtaba\ Ghafari.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-size: contain;   
+    }
+    #about-section{
+        padding: 0;
+    }
+    #skills-section .inner-part .header h1{
+        font-size: 1rem !important;
+    }
+    #skills-section .inner-part .header::before{
+        height: 2px;
+        width: 70px;
+        bottom: 18px;
+    }
+    section #header{
+        font-size: 1.3em;
+        font-weight: 600;
+    }
+    #service-section h4{
+        font-size: 18px;
+    }
+    #service-section .card h5{
+        font-size: 15px;
+    }
+    #contact-section .contact{
+        height: 90%;
+        width: 95%;
+    }
+    footer .contact-info{
+        margin-top: 8px;
+    }
+    footer .contact-info i{
+        margin-top: 5px;
+    }
+}
+@media (max-width: 420px){
+    .logo img{
+        height: 30px;
+        margin-top: 15px;
+    }
+    #icon{
+        font-size: 1em;
+        margin-right: 40px;
+        background: #2c3e50;
+        color: #e3f2fd;
+        padding: 5px 10px !important;
+        border-radius: 6px;
+        cursor: pointer;
+        z-index: 2000;
+        margin-right: 5px;
+        margin-top: 10px;
+    }
+        main{
+            height: 50vh !important;
+        }
+        main .bg-img{
+            height: 50vh;
+            margin: 0;
+            background-image: url(../images/home\,\ Mujtaba\ Ghafari.png);
+            background-repeat: no-repeat;
+            background-position-x: right;
+            background-position-y: bottom;
+            background-size: contain;   
+        }
+    .content{
+        top: 15%;
+        left: 3%;
+    }
+    .content .text{
+        font-size: 1.3em;
+    }
+    .content .name{
+        font-size: 1.7em;
+    }
+    .content .job{
+        font-size: .8em;
+    }
+    .content .resume button{
+        height: 30px;
+        width: 120px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+    .content .resume a,.content .resume button{
+        text-decoration: none; 
+        font-size: 0.8em !important;
+    }
+    #about-section #Header2 h2{
+        padding: 20px 20px 0 10px;
+        font-size: 1em;
+    }
+    #about-section #Header2 h2::before{
+        position: absolute;
+        content: '';
+        bottom: -5px;
+        height: 2px;
+        width: 45px;
+    }
+    #about-section p{
+        font-size: 0.8em;
+        font-weight: 400;
+        padding: 10px;
+    }
+    #about-section .bio .intro{
+        padding: 0px 0px 0 10px;
+        font-size: 0.7em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between !important;
+    }
+    /* <--------Icons----------> */
+    #about-section .bio .hobbies div{
+        margin: 0 10px;
+        font-size: 0.8em;
+    }
+    #about-section .bio .hobbies span{
+        margin: 0 4px;
+    }
+    #about-section .bio .hobbies .icon{
+        height: 30px;
+        width: 30px;
+        line-height: 29px;
+    }
+    footer #icons a{
+        height: 35px;
+        width: 35px;
+        border-radius: 50%;
+        font-size: 1em;
+    }
+    footer .contact-info{
+        margin-top: 7px;
+        font-size: 15px;
+    }
+    footer .contact-info i{
+        margin-top: 5px;
+    }
+}
+@media (max-width: 330px){
+    main{
+        height: 40vh !important;
+    }
+    main .bg-img{
+        height: 40vh;
+        margin: 0;
+        background-image: url(../images/home\,\ Mujtaba\ Ghafari.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-size: contain;   
+    }
+    nav .logo{
+        height: 30px;
+        width: 60% !important;
+        margin-left: 7px;
+        margin-bottom: 20px;
+    }
+    nav .logo img{
+        height: 100%;
+        width: 100%;
+    }
+    #icon{
+        font-size: .7em;
+        padding: 2px 5px;
+        border-radius: 2px;
+    }
+    .content{
+        top: 13%;
+        left: 3%;
+    }
+    .content .text{
+        font-size: 0.9em;
+    }
+    .content .name{
+        font-size: 1em;
+        padding-left: 4px;
+    }
+    .content .job{
+        font-size: .8em;
+        margin: 5px 0 0 0 !important;
+    }
+    footer #icons a{
+        height: 25px;
+        width: 25px;
+        border-radius: 50%;
+    }
+    footer #icons a, footer .contact-info{
+        font-size: 12px;
+    }
+}
+@media (max-width: 248px){
+    main{
+        height: 35vh !important;
+    }
+    main .bg-img{
+        height: 35vh;
+        margin: 0;
+        background-image: url(../images/home\,\ Mujtaba\ Ghafari.png);
+        background-repeat: no-repeat;
+        background-position-x: right;
+        background-position-y: bottom;
+        background-size: contain;   
+    }
+    .content{
+        top: 11%;
+        left: 3%;
+    }
+    .content .text{
+        font-size: 0.8em;
+    }
+    .content .name{
+        font-size: 0.9em;
+    }
+    .content .job{
+        font-size: .6em !important;
+    }
+    .content .resume button{
+        height: 30px;
+        width: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } 
+    .content .resume a,.content .resume button{
+        text-decoration: none; 
+        font-size: 8px !important;
+    }
+    #about-section .bio .hobbies span{
+        margin: 0 5px;
+    }
+    #about-section .bio .hobbies .icon{
+        height: 25px;
+        width: 25px;
+        line-height: 25px;
+    }
+    #about-section .bio .hobbies .icon::before{
+        display: none;
+    }
+    #contactGrid{
+        display: grid !important;
+        grid-template-columns: 1fr;
+    }
+    #contactGrid form h1{
+        font-size: 1em;
+        width: 100%;
+        padding: 0 !important;
+    }
+    #contactGrid .map{
+        grid-column: 1 / 12;
+        width: 100%;
+        height: 100%;
+        display: none;
+    }
+    #contactGrid .form{
+        grid-column: 1 / 12;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 10px !important;
+    }
+    #contactGrid .form form{
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0px !important;
+    }
+    #contactGrid .form button{
+        width: 100%;
+        margin: 15px auto;
+    }
+    footer #icons a{
+        height: 19px;
+        width: 19px;
+        border-radius: 50%;
+    }
+    footer #icons a, footer .contact-info{
+        font-size: 10px;
+    }
+}
+@media only screen and (max-height: 736px){
+    #contact-section{
+        height: 100vh !important; 
+        overflow: visible; 
+    }
+    #contact-section .contact{
+        height: 90%;
+    }
+    #contact-section .form h1{
+        font-size: 1rem;
+        padding: 1rem;
+    }
+    #contact-section .form form{
+        padding: 0 1rem !important;
+    }
+    #contact-section .form input, #contact-section .form textarea{
+        width: 100%;
+        padding: 1rem;
+    }
+    #contact-section .form input:not(:first-child), #contact-section .form textarea, .form button{
+        margin-top: .5rem;
+    }
+    #contact-section .form button{
+        padding: 1rem 2rem;
+        border-radius: 2rem;
+    }
+    #contact-section  .form textarea{
+        height: 5rem;
+    }
+}
+@media only screen and (max-height: 650px){
+    #contact-section .contact{
+        height: 90%;
+    }
+    #contact-section .form h1{
+        font-size: 0.8rem;
+        padding: 1rem;
+    }
+    #contact-section .form form{
+        padding: 0 0.6rem !important;
+    }
+    #contact-section .form input, #contact-section .form textarea{
+        padding: 0.6rem;
+        border-radius: 1.7rem;
+    }
+    #contact-section .form input:not(:first-child), #contact-section .form textarea, .form button{
+        margin-top: .5rem;
+    }
+    #contact-section .form button{
+        padding: 0.7rem 1rem;
+        border-radius: 2rem;
+    }
+    #contact-section  .form textarea{
+        height: 5rem;
+    }
+}
+@media only screen and (max-height: 585px){
+    #contact-section .contact{
+        height: 80%;
+    }
+    .contact .map{
+        display: none;
+    }
+}
+@media only screen and (max-height: 473px){
+    #contact-section{
+        height: 110vh !important; 
+        overflow: visible; 
+    }
+    #contact-section .contact{
+        height: 80%;
+    }
+}
+@media (max-width: 768px){
+    #home-section .container-fluid{
+        display: grid !important;
+        grid-template-columns: 1fr 1fr;
+
+    }
+}
